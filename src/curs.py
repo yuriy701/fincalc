@@ -57,6 +57,7 @@ start = 24.5
 c5 = np.linspace(start, 40.1, 60)
 c5_op = np.linspace(start, 33.7, 60)
 c5_pes = np.linspace(start, 50.125, 60)
+c5_pes_exp = start * np.logspace(0, 0.31, 60)
 
 c5_upend = np.zeros(60)
 c5_upend[0:40] = np.linspace(start, 26.0, 40)
