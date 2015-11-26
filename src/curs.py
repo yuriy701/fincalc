@@ -44,13 +44,19 @@ hist_curs[217] = 29.3 #2015  [2]
 hist_curs[218] = 26.21 #2015 [3]
 hist_curs[219] = 23.6442 #2015[4]
 hist_curs[220:223] = np.linspace(22.11, 24.83, 3) #2015 [5-7]
-hist_curs[223] = 23.31 #2015 [8]
-hist_curs[224] = 23.122 #2015[9]
-hist_curs[225] = 23.57 # 2015 [10]  now
+hist_curs[223] = 23.31  # 2015 [8]
+hist_curs[224] = 23.122 # 2015[9]
+hist_curs[225] = 23.57  # 2015 [10]  
+hist_curs[226] = 25.11  # 2015 [11]
 
-hist_curs[226:] = np.linspace(24.1, 41.0, size - 226)
+hist_curs[227:] = np.linspace(24.1, 41.0, size - 227)
 
-
+def add_rand(x):
+    N = len(x)
+    y = np.zeros(N)
+    for i in range(N):
+        y[i] = x[i]*(1+(np.random.random_sample()-0.4)*0.15)
+    return y
 
 start = 24.5
 
@@ -58,6 +64,12 @@ c5 = np.linspace(start, 40.1, 60)
 c5_op = np.linspace(start, 33.7, 60)
 c5_pes = np.linspace(start, 50.125, 60)
 c5_pes_exp = start * np.logspace(0, 0.31, 60)
+
+c5r = add_rand(c5)
+c5r[0] = 25.11
+
+c5_opr = add_rand(c5_op)
+c5_opr[0] = 25.33
 
 c5_upend = np.zeros(60)
 c5_upend[0:40] = np.linspace(start, 26.0, 40)
@@ -76,6 +88,9 @@ c5_upstart[12:] = np.linspace(40.1, 41.0, 48)
 c5_upstart_pes = np.zeros(60)
 c5_upstart_pes[:12] = np.linspace(start, 51.1, 12)
 c5_upstart_pes[12:] = np.linspace(51.1, 53.1, 48)
+
+c5_USr = add_rand(c5_upstart)
+c5_USPr = add_rand(c5_upstart_pes)
 
 clog = np.zeros(60)
 
@@ -107,6 +122,6 @@ def curs_av_raise60(c):
     return cr
      
 
-
+   
 
 
