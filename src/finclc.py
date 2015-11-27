@@ -1,16 +1,5 @@
 import numpy as np
 
-#hist_curs = np.zeros(240)
-#hist_curs[:12] = 5.43 #  2000
-#hist_curs[12:24] = 5.37 #2001
-#hist_curs[24:72] = 5.33 #2002 - #2005
-#hist_curs[72:96] = 5.05 #2006 - 2007
-#hist_curs[96:108] = 5.5  #2008
-#hist_curs[108:120] = 7.8 #2009
-#hist_curs[120:168] = 8.0 #2010 - 2013
-#hist_curs[168:180] = 15.0 #2014
-#hist_curs[180:192] = 23.5 #2015
-#hist_curs[192:] = np.linspace(23.5, 40.0, 240-192)
 
 
 def date2index(year, month):

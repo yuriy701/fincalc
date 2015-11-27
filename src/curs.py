@@ -55,15 +55,16 @@ def add_rand(x):
     N = len(x)
     y = np.zeros(N)
     for i in range(N):
-        y[i] = x[i]*(1+(np.random.random_sample()-0.4)*0.15)
+        y[i] = x[i]*(1+(np.random.random_sample()-0.5)*0.15)
     return y
 
 start = 24.5
 
-c5 = np.linspace(start, 40.1, 60)
+c5 = np.linspace(start, 41.1, 60)
 c5_op = np.linspace(start, 33.7, 60)
 c5_pes = np.linspace(start, 50.125, 60)
 c5_pes_exp = start * np.logspace(0, 0.31, 60)
+c5_pesr = add_rand(c5_pes)
 
 c5r = add_rand(c5)
 c5r[0] = 25.11
