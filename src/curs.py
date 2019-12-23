@@ -66,7 +66,9 @@ hist_curs[239] = 28.00  # 2016 [12]
 hist_curs[240:248] = np.linspace(27.50, 25.70, 8) #2017 [1-8]
 hist_curs[249:253] = np.linspace(26.55, 28.00, 4) #2017 [9-12]
 
-hist_curs[253:] = np.linspace(24.1, 41.0, size - 253)
+hist_curs[253] = 28.50  # 2018 [1]
+
+hist_curs[254:] = np.linspace(24.1, 41.0, size - 254)
 
 def add_rand(x):
     N = len(x)
